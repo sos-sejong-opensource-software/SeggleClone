@@ -1,0 +1,2282 @@
+{
+	"info": {
+		"_postman_id": "0a1bbdff-b214-4162-980f-4064152cbee9",
+		"name": "seggle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18981301"
+	},
+	"item": [
+		{
+			"name": "announcement",
+			"item": [
+				{
+					"name": "00-07 공지 리스트 조회",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2MjgyMzkxLCJpYXQiOjE2NDYyNzg3OTEsImp0aSI6IjgxM2VmZDk1MDE1ZjRlNTBhZmRjZmQ0MTFjZWViMzczIiwidXNlcl9pZCI6MX0.euttkKkRdQMqxRDE0u3qEa54C8SemMyJ7tQ9cIcxWbo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzMTMyODc3LCJpYXQiOjE2NDMxMzI1NzcsImp0aSI6IjM1YjY5MGExNTcxYTQ2NTg5NWVhZTA2MmYzNzAxYmJhIiwidXNlcl9pZCI6MX0.viNRPD3cVy_2eZvQRJovTPdQKZXD-sRjPp94RK_ARdw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/announcements",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"announcements"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "keyword",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "00-08 공지 생성",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNTQyNDM3LCJpYXQiOjE2NDM1Mzg4MzcsImp0aSI6ImQ0ZmI5YTVjZDY3NzQ0ZjY5Y2M4ZDg3Njg0YTI1ODUxIiwidXNlcl9pZCI6MX0.mBNzzFp4jLioIyc67hlsK64WCEJMB5bkz3rtx7FtSMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzMTMyODc3LCJpYXQiOjE2NDMxMzI1NzcsImp0aSI6IjM1YjY5MGExNTcxYTQ2NTg5NWVhZTA2MmYzNzAxYmJhIiwidXNlcl9pZCI6MX0.viNRPD3cVy_2eZvQRJovTPdQKZXD-sRjPp94RK_ARdw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"공지글 제목 입니다.keyword\",\r\n    \"context\" : \"공지글 공지글 공지글 공지글 공지글 \",\r\n    \"created_user\" : \"seggle\",\r\n    \"important\" : true,\r\n    \"visible\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/announcements",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"announcements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "00-09 공지 수정",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNTQyNDM3LCJpYXQiOjE2NDM1Mzg4MzcsImp0aSI6ImQ0ZmI5YTVjZDY3NzQ0ZjY5Y2M4ZDg3Njg0YTI1ODUxIiwidXNlcl9pZCI6MX0.mBNzzFp4jLioIyc67hlsK64WCEJMB5bkz3rtx7FtSMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "수정된 title 입니다",
+									"type": "text"
+								},
+								{
+									"key": "context",
+									"value": "수정된 context 입니다",
+									"type": "text"
+								},
+								{
+									"key": "visible",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "important",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/announcements/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"announcements",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "00-10 공지 삭제",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNTQzMzAxLCJpYXQiOjE2NDM1Mzk3MDEsImp0aSI6IjUwODRkMTVlZGQzNjRmZGY5ZTU0N2QzNzQ3ZDY1MWNjIiwidXNlcl9pZCI6MX0.qWaz3hLJJhhZQpJE1dj2bQ7wziCmZe_s8xE9whaLd3o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/announcements/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"announcements",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "00-11 공지 visible, important 수정",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNTQzMDg1LCJpYXQiOjE2NDM1Mzk0ODUsImp0aSI6ImI3ZjA1NTZhN2I5ZDQ5NTFhYmJmZTIwNjc5YTNiYjQ4IiwidXNlcl9pZCI6MX0.izgfEeBNGAwmxSP_JJ_UB8wBA96BUeNrJxP64Kg7AdQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "visible",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "important",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/announcements/1/check",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"announcements",
+								"1",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "00-12 공지글 세부 조회",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNTQyOTE4LCJpYXQiOjE2NDM1MzkzMTgsImp0aSI6ImZjMjFmMmQ3NTNmMTQ0ODY4Mzk3MzhkMWY2NDY3MGYyIiwidXNlcl9pZCI6MX0.TQoEw9Jtra5F274w_m4fkNrZWLJxWULT6zeo5kmY7pM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/announcements/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"announcements",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-01 공지 리스트 조회",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/announcements",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"announcements"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "keyword",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-02 공지 세부글 조회",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNTQyOTE4LCJpYXQiOjE2NDM1MzkzMTgsImp0aSI6ImZjMjFmMmQ3NTNmMTQ0ODY4Mzk3MzhkMWY2NDY3MGYyIiwidXNlcl9pZCI6MX0.TQoEw9Jtra5F274w_m4fkNrZWLJxWULT6zeo5kmY7pM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "announcement_title",
+									"value": "수정된 title 입니다",
+									"type": "text"
+								},
+								{
+									"key": "announcement_context",
+									"value": "수정된 context 입니다",
+									"type": "text"
+								},
+								{
+									"key": "announcement_visible",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "announcement_important",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/announcements/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"announcements",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "faqs",
+			"item": [
+				{
+					"name": "02-00 faq 전체 조회(visible == True)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzMzcwMjYzLCJpYXQiOjE2NDMzNjY2NjMsImp0aSI6ImIwOTQzOGQ3NzM0YTQ1MjA5M2ZjMzVlNmM1MWNiMzVmIiwidXNlcl9pZCI6MX0.Q0uk4Va1J91NSfXat25N-IWWf0YDyh383vJPwlfx-uk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/faqs/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"faqs",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "01-06 비밀번호 변경",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNjIzMTA4LCJpYXQiOjE2NDM2MjI1MDgsImp0aSI6ImJjMWMxYjU2MGU2YjQyNTZhZDdjZWQ2ZGQ3YTI3NTkyIiwidXNlcl9pZCI6Mn0.YHjq4xEhn6xpvAouFApuZf48RED8xUEbn2auuhRwUbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "current_password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "seggleseggle",
+									"type": "text"
+								},
+								{
+									"key": "new_password2",
+									"value": "seggleseggle",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/seggle5/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"seggle5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "01-02 유저 등록",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "seggle2",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "testuser",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "seggle2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "seggleseggle",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "seggleseggle",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "01-07 유저 조회",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0OTg3Mzc5LCJpYXQiOjE2NDQ5ODcwNzksImp0aSI6ImYwYTk5NjM1Zjg4MjRjODg4NGRjOWQwNDAxM2RiMWY4IiwidXNlcl9pZCI6N30.KTH_mnuMAVvkj_DSeWXQO8JQhP0kZfDqqnNoCfwf6yU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"test_usser\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.37.186.158:8000/api/users/test_usser/",
+							"protocol": "http",
+							"host": [
+								"3",
+								"37",
+								"186",
+								"158"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"test_usser",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "01-08 회원탈퇴",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ1MDg4MDc5LCJpYXQiOjE2NDUwODc3NzksImp0aSI6ImZkM2I0MTY5NWEyNDRlZTY5ODhhYmU4NDg1YTEwNDliIiwidXNlcl9pZCI6M30.swup2pHgCAH8de5e0PLpYDfTu1VMCGRfHwDY7dr1Y7E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"seggleseggle\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.37.186.158:8000/api/users/seggle3/",
+							"protocol": "http",
+							"host": [
+								"3",
+								"37",
+								"186",
+								"158"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"seggle3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "00-00 유저 리스트 조회",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNjIzNjgwLCJpYXQiOjE2NDM2MjMwODAsImp0aSI6IjZhYzJkNDg4Y2IwNzQ2MGRhMjVjMzQ4ZDFkNjljOTA2IiwidXNlcl9pZCI6MX0.YT56fsRPdgG6n_wOAoEX_sup0WQvte5WUsDoyjZdeCQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzMTMxNjU4LCJpYXQiOjE2NDMxMzEzNTgsImp0aSI6ImYxMmM4ZWQ1Nzk5YjQ2M2I4NmE0MTU1YWY4Y2QxNTM0IiwidXNlcl9pZCI6MX0.mh6jBBodPxvWBt91a1oRmehfuaw_m6b2vJLY7tAiVNs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "00-01 유저 정보 수정",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "00-01-02 유저 조회",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNzk2NjYxLCJpYXQiOjE2NDM3OTYzNjEsImp0aSI6ImQyMjQ2MWZlMWNmOTQzNDFiOTg2NzRhZWU3MmVmNmIwIiwidXNlcl9pZCI6MX0.xi7hWEXu2ssmEng52DdQHkbym0CbWJVP4dIfV896n_Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/users/seggle6/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"seggle6",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "00-01-03 유저 회원탈퇴",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNzkxNjE4LCJpYXQiOjE2NDM3ODk4MTgsImp0aSI6IjA0YWEzOGNiNzA0NjQ3NTFhYmZjOTY0YjUyZDViODA5IiwidXNlcl9pZCI6MX0.4jRKT8ptjxUnymYzMWjEMAvOnVgKaa0J6V8YVqijlrs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/users/seggle2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"seggle2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "유저 비밀번호 리셋",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "01-09 Class 조회",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0MTI2NDQxLCJpYXQiOjE2NDQxMjI4NDEsImp0aSI6ImVjNTgxOWUyN2RmOTQ4MDdhNTY1MzE5NjVhN2VmYTU2IiwidXNlcl9pZCI6MX0.EUTqUjRuRXxRnh3qtQ4HTmM_0jLFX6fidiOqSPBTV3Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/class/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"class",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "01-10 Class is_show 수정",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0MzA2ODA2LCJpYXQiOjE2NDQzMDMyMDYsImp0aSI6ImJiZDZmYTExMzMzYzQ3OTk4NmI2MjU5N2MwMjZiNjdhIiwidXNlcl9pZCI6MX0.3taPZHQmheil0xL8bVlQbbo091MSKwOFw6dvnEhf_gY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"class_id\" : 2\n    },\n    {\n\t    \"class_id\" : 1\n    },\n    {\n\t    \"class_id\" : 3\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/class",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"class"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "01-12 유저  잔디밭",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2Mjc3OTEwLCJpYXQiOjE2NDYyNzQzMTAsImp0aSI6IjQ2NGNiMzI5ZTVhMjRjMzRiMTQ1ZjRhMWQ3NzM3ZGY1IiwidXNlcl9pZCI6MX0.j-4YqsMy64uGf2M-IYEXGjYUei_xu7E8e0ShJayvwnE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/seggle/contributions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"seggle",
+								"contributions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "01-11 참가 대회",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2Mjg5MTMxLCJpYXQiOjE2NDYyODU1MzEsImp0aSI6ImY4ZGVkODU3MWJmYjRjZmE4M2Q0OTBmMTJhZGEzZDJlIiwidXNlcl9pZCI6Mn0.0JBMBcXZr8Ee6KXYFxOrdhAF_bGRSDV5wmPB0-lXJQQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/seggle2/competitions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"seggle2",
+								"competitions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "problem",
+			"item": [
+				{
+					"name": "03-02 문제 생성",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NjE5ODg4LCJpYXQiOjE2NDg2MTgwODgsImp0aSI6ImRhODAzNjgyNjZiZTRhOGNhMzFiNGUwNGU5YjBjMmY1IiwidXNlcl9pZCI6MX0.jHCfGu-7iFs36eKkYNPqGfeJw4ESNpgVWzSXMlDFT8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"type": "file",
+									"src": "/C:/Users/KSR/Downloads/Basic_Element_jpg.zip"
+								},
+								{
+									"key": "solution",
+									"type": "file",
+									"src": "/C:/Users/KSR/Desktop/sol (1).csv"
+								},
+								{
+									"key": "title",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "temp description",
+									"type": "text"
+								},
+								{
+									"key": "public",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "data_description",
+									"value": "temp data description",
+									"type": "text"
+								},
+								{
+									"key": "evaluation",
+									"value": "MSE",
+									"type": "text"
+								},
+								{
+									"key": "class_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/problems/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"problems",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-01 문제 조회",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ3ODU2NTgyLCJpYXQiOjE2NDc4NTQ3ODIsImp0aSI6IjU4ZTQ1YWQxOWUxOTQxODZhMGQzY2FjMTNmMTVhYzVkIiwidXNlcl9pZCI6MX0.73kdrXdVuoKu2Opu6AQlCoDHQ3C8-iJQpNv-HKcxOSQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/problems/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"problems",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-03 문제 수정",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ1NTI1MTQ3LCJpYXQiOjE2NDU1MjQ4NDcsImp0aSI6ImM4ZmJlNmI3YmU4ZTQ1ODQ4ODRlM2NhMWY1NDkxZjJhIiwidXNlcl9pZCI6MX0.psydTDQd8eZD4VLEJY35moKjTqaw8K6IAlyNd2_OoLI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "put problem title - backend",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "put problem description",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"type": "file",
+									"src": "/C:/Users/KSR/Desktop/sol.csv"
+								},
+								{
+									"key": "data_description",
+									"value": "put data description",
+									"type": "text"
+								},
+								{
+									"key": "public",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "solution",
+									"type": "file",
+									"src": "/C:/Users/KSR/Desktop/sol.csv"
+								},
+								{
+									"key": "evaluation",
+									"value": "MAE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/problems/4/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"problems",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-04 문제 세부 조회",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ3ODU2NTgyLCJpYXQiOjE2NDc4NTQ3ODIsImp0aSI6IjU4ZTQ1YWQxOWUxOTQxODZhMGQzY2FjMTNmMTVhYzVkIiwidXNlcl9pZCI6MX0.73kdrXdVuoKu2Opu6AQlCoDHQ3C8-iJQpNv-HKcxOSQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/problems/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"problems",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-05 문제 삭제",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ1OTU2NTg5LCJpYXQiOjE2NDU5NTQ3ODksImp0aSI6IjliMTkwMGY4NzdkOTQ2M2M5NmNiMGYxZTI0MGVmY2M4IiwidXNlcl9pZCI6MX0.jC0LaVJoiY-ZC9zBIO7nqr21HnSNaBqroZX_pyGSphU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/problems/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"problems",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-06 문제의 public 수정",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/problems/1/check/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"problems",
+								"1",
+								"check",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-04 문제 세부 조회 Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ1OTU2NTg5LCJpYXQiOjE2NDU5NTQ3ODksImp0aSI6IjliMTkwMGY4NzdkOTQ2M2M5NmNiMGYxZTI0MGVmY2M4IiwidXNlcl9pZCI6MX0.jC0LaVJoiY-ZC9zBIO7nqr21HnSNaBqroZX_pyGSphU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/problems/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"problems",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "competition",
+			"item": [
+				{
+					"name": "06-00 대회 리스트 조회",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "test",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-01 대회 생성",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NzQzMjE5LCJpYXQiOjE2NDg3NDE0MTksImp0aSI6IjE0NTEzMWNjYjMyNTRjYjZhYzQ3YzUzNDUxMTkyNzYxIiwidXNlcl9pZCI6MX0.VM7ihIhut7gWBP93QXqi0Weta824dCbpQBs3ROinDwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "solution",
+									"type": "file",
+									"src": "/C:/Users/KSR/Desktop/sol (1).csv"
+								},
+								{
+									"key": "title",
+									"value": "test competition",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "temp description",
+									"type": "text"
+								},
+								{
+									"key": "public",
+									"value": "true",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data_description",
+									"value": "temp data description",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"type": "file",
+									"src": "/C:/Users/KSR/Downloads/과제1_19013225_김주연.zip"
+								},
+								{
+									"key": "start_time",
+									"value": "2022-03-03 15:15:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "2022-10-03 15:15:00",
+									"type": "text"
+								},
+								{
+									"key": "evaluation",
+									"value": "RMSE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/competitions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-02 대회 개별 조회",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions/3/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-03-01 대회 개별 수정(파일 있는 버전)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ1NzIxNzg2LCJpYXQiOjE2NDU3MTk5ODYsImp0aSI6IjY5ZDYyODIyMGY4MzQ0NzliYzM4YzAxZjAwOGIyZmE1IiwidXNlcl9pZCI6MX0.NDJp-KWKewuu-N8hht5PaVPbLy2ws7aLzSXLrtnZl9Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "title 수정",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "temp description",
+									"type": "text"
+								},
+								{
+									"key": "public",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "data_description",
+									"value": "temp data description",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "2022-02-03 15:15:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "2022-02-03 15:15:00",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"type": "file",
+									"src": "/C:/Users/KSR/Desktop/sol.csv"
+								},
+								{
+									"key": "solution",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "evaluation",
+									"value": "RMSE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-03-01 대회 개별 수정(파일 없는 버전)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0NTk4OTg0LCJpYXQiOjE2NDQ1OTg2ODQsImp0aSI6IjBhMzI4Y2I5YjdkOTQ2Y2ZhMTYyMzc1N2M1NmJjOTBiIiwidXNlcl9pZCI6MX0.yDJnxeKBeQGJ9x_QzJtiJt5Gsfj-FV7ty3jUs36cgwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "title 수정2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "temp description",
+									"type": "text"
+								},
+								{
+									"key": "public",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "data_description",
+									"value": "temp data description",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "2022-02-03 15:15:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "2022-02-03 15:15:00",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "solution",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "evaluation",
+									"value": "Log loss",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-03-02 대회 삭제",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0NTk1MDQ4LCJpYXQiOjE2NDQ1OTMyNDgsImp0aSI6ImU3MTFmN2Y3MjBlOTQwMWU5NTM0MDE0YjIyNWJiNzc1IiwidXNlcl9pZCI6MX0.jgr0hCCPxiemiK_OqrQgYkR4r9E1bOJ9RTTdvQVgM-M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-05-01 유저 대회 참가",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NzM3NTE0LCJpYXQiOjE2NDg3MzU3MTQsImp0aSI6ImQ2ZjBmYTJkOWY4ODRkNzFiYjEzNzQzZmJhY2JhNzk2IiwidXNlcl9pZCI6MX0.qQs2r-OwYhTtgRqmYLEIlR9UZq8IUf7r3bCElkqTvF4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions/1/participation/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								"1",
+								"participation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-05-02 조교 대회 참가",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0OTQ0ODE3LCJpYXQiOjE2NDQ5NDEyMTcsImp0aSI6IjY3ODU4YTk2Y2U1NTRlYTNhMjBhOWE1YzIxYmFhMTc1IiwidXNlcl9pZCI6MX0.B2kl9MwFRll0Tv0VjxfH8dYtcwfRzCoNa4esuqZoq5A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n{\r\n\"username\": \"seggle3\"\r\n},\r\n{\r\n\"username\": \"seggle4\"\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions/1/participation/ta",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								"1",
+								"participation",
+								"ta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-05-03 참가한 유저 조회",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions/1/participation/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								"1",
+								"participation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-04 대회 유저 파일 제출",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NjM2MTg4LCJpYXQiOjE2NDg2MzQzODgsImp0aSI6Ijk2MzJiNmEzYzZkOTQxYzlhNjgxNTU5YWRkMzkwZTkwIiwidXNlcl9pZCI6MX0.rM1tfTGYNqTd18PjtUZhdKMKh2-B9d7PMe-SbnxGbKM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "csv",
+									"type": "file",
+									"src": "/C:/Users/KSR/Desktop/sol (1) - 복사본(낮은거).csv"
+								},
+								{
+									"key": "ipynb",
+									"type": "file",
+									"src": "/D:/JupyterNotebook/2021Fall/ch4 분류.ipynb"
+								},
+								{
+									"key": "ip_address",
+									"value": "123.123.1.12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions/1/submission/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								"1",
+								"submission",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-07 submission 내역 조회",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NjM2MTg4LCJpYXQiOjE2NDg2MzQzODgsImp0aSI6Ijk2MzJiNmEzYzZkOTQxYzlhNjgxNTU5YWRkMzkwZTkwIiwidXNlcl9pZCI6MX0.rM1tfTGYNqTd18PjtUZhdKMKh2-B9d7PMe-SbnxGbKM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions/1/submissions/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								"1",
+								"submissions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "06-06 리더보드 체크",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NjM2MTg4LCJpYXQiOjE2NDg2MzQzODgsImp0aSI6Ijk2MzJiNmEzYzZkOTQxYzlhNjgxNTU5YWRkMzkwZTkwIiwidXNlcl9pZCI6MX0.rM1tfTGYNqTd18PjtUZhdKMKh2-B9d7PMe-SbnxGbKM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n{\r\n    \"id\":3\r\n},\r\n{\r\n    \"id\":2\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/competitions/1/check/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"competitions",
+								"1",
+								"check",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "submission",
+			"item": [
+				{
+					"name": "07-00 Submission Class 조회 username & cpid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ3ODU2NTgyLCJpYXQiOjE2NDc4NTQ3ODIsImp0aSI6IjU4ZTQ1YWQxOWUxOTQxODZhMGQzY2FjMTNmMTVhYzVkIiwidXNlcl9pZCI6MX0.73kdrXdVuoKu2Opu6AQlCoDHQ3C8-iJQpNv-HKcxOSQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/submissions?page=3&username=seggle&cpid=2",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"submissions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								},
+								{
+									"key": "username",
+									"value": "seggle"
+								},
+								{
+									"key": "cpid",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "leaderboard",
+			"item": [
+				{
+					"name": "09-01 leaderboard contest-problem 조회",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ3ODU2NTgyLCJpYXQiOjE2NDc4NTQ3ODIsImp0aSI6IjU4ZTQ1YWQxOWUxOTQxODZhMGQzY2FjMTNmMTVhYzVkIiwidXNlcl9pZCI6MX0.73kdrXdVuoKu2Opu6AQlCoDHQ3C8-iJQpNv-HKcxOSQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/leaderboards/contest-problem/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"leaderboards",
+								"contest-problem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "09-00 대회 문제 리더보드 조회",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/leaderboards/competitions/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"leaderboards",
+								"competitions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "password",
+			"item": [
+				{
+					"name": "11-00 password reset email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "hyeon9698@naver.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/apply_reset_password/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apply_reset_password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "11-01 password reset token valid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "fc9e63ae3a",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/reset_password_token_vaild/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reset_password_token_vaild",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "11-02 password reset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "fc9363ae3a",
+									"type": "text"
+								},
+								{
+									"key": "password1",
+									"value": "newpassword123",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "newpassword123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/reset_password/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reset_password",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin-login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "seggle",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "seggleseggle",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"seggle\",\n    \"password\" : \"seggleseggle\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login refresh api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0NTI2OTYyNywiaWF0IjoxNjQ1MTgzMjI3LCJqdGkiOiI2NmNjMTI2ZDM1ZjE0YjdjOTlmNGE5ZThmMzZkMDQzNCIsInVzZXJfaWQiOjZ9.1doDenW2mdWymDXKXqMabjT2Cy6BTTwRZy5Bw-X8veg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/login/refresh/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"login",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/users/logout/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-user-modify",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzMTkyNjI5LCJpYXQiOjE2NDMxOTIzMjksImp0aSI6IjVhZGI1NjQ3MzU1MjQ3ZjQ4OGU3Y2E5YzhmYmM0Y2Q0IiwidXNlcl9pZCI6MX0.2RYkUIWJrU_dFMWH0fZbpuHSCfN6dLHczAMDaMjMrJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": \"seggle2\",\n\t\"user_name\": \"modified_person\",\n\t\"user_email\": \"modified@naver.com\",\n\t\"user_privilege\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/admin/users/seggle/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"users",
+						"seggle",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "123123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "123123",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "123@naver.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "21123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

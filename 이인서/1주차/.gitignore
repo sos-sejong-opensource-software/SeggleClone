@@ -1,0 +1,4 @@
+/venv/
+dbconnection.cnf
+/.idea/
+__pycache__
